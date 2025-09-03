@@ -39,3 +39,101 @@ main {
     padding: 20px;
     min-height: calc(100vh - 120px); /* Pour que le footer reste en bas */
 }
+.band-description {
+    max-width: 800px;
+    margin: 20px auto; /* Centre le bloc de description et ajoute des marges */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ajoute une légère ombre */
+    border-radius: 8px; /* Bords légèrement arrondis */
+}
+
+.member-block {
+    display: flex; /* Utilise Flexbox pour aligner l'image et le texte côte à côte */
+    align-items: center; /* Centre verticalement l'image et le texte */
+    margin-bottom: 25px; /* Espace entre chaque bloc membre */
+    background-color: #f9f9f9; /* Couleur de fond pour chaque bloc membre */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.member-photo {
+    width: 100px; /* Taille fixe pour les photos des membres */
+    height: 100px; /* Assure que la hauteur est la même que la largeur */
+    object-fit: cover; /* Recadre l'image pour qu'elle couvre la zone sans déformer */
+    border-radius: 50%; /* Rend les photos rondes */
+    margin-right: 20px; /* Espace entre la photo et le texte */
+    border: 3px solid #95c3f5; /* Petite bordure autour de la photo */
+}
+
+.member-block p {
+    margin: 0; /* Supprime la marge par défaut des paragraphes dans les blocs membres */
+    flex-grow: 1; /* Permet au paragraphe de prendre l'espace restant */
+    color: #333; /* Couleur de texte générale pour les descriptions des membres */
+}
+
+/* Styles pour les liens à l'intérieur du texte des membres */
+.member-link {
+    color: #666; /* Gris plus clair pour les liens par défaut */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Rend le texte des liens plus épais */
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.member-link:hover {
+    color: #fff; /* Blanc au survol */
+    background-color: #333; /* Fond sombre pour le texte en blanc */
+    padding: 2px 5px; /* Ajoute un peu de padding autour du texte au survol */
+    border-radius: 3px; /* Bords légèrement arrondis */
+}
+
+.hero-image {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px; /* Espace sous l'image */
+}
+/* Styles pour les blocs membres sur la page des membres */
+.member-block-details {
+    display: flex;
+    align-items: flex-start; /* Aligne l'image et le texte en haut du bloc */
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.member-photo-large {
+    width: 200px; /* Taille plus grande pour la photo */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 3px solid #ccc;
+    flex-shrink: 0; /* Empêche l'image de se compresser */
+}
+
+.member-text h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.member-text p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Vous pouvez ajouter une règle pour inverser l'ordre des blocs */
+/* pour alterner la position des images (optionnel) */
+.member-block-details:nth-child(even) {
+    flex-direction: row-reverse; /* Aligne l'image à droite */
+}
+
+.member-block-details:nth-child(even) .member-photo-large {
+    margin-right: 0;
+    margin-left: 30px;
+}
