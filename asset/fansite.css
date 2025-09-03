@@ -6,7 +6,7 @@ body {
 }
 
 header, footer {
-    background-color: #0f0f0f;
+    background-color: #000000;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -25,14 +25,14 @@ header nav, footer nav {
 }
 
 header nav a, footer nav a {
-    color: white;
+    color: #e0e0e0; /*la couleur est un peu grise aavant le survol comme sur le site officiel*/
     text-decoration: none;
     margin: 0 10px;
-    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
+    transition: color 0.3s ease; 
 }
 
 header nav a:hover, footer nav a:hover {
-    color: #e0e0e0; /* Change la couleur au survol (un gris plus clair) */
+    color: white; /* Change la couleur au survol (blanc) */
 }
 
 main {
