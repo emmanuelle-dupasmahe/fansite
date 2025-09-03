@@ -6,16 +6,33 @@ body {
 }
 
 header, footer {
-    background-color: #333;
+    background-color: #0f0f0f;
     color: white;
     padding: 1rem;
     text-align: center;
+}
+header nav, footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+    flex-wrap: wrap;
+    padding: 0 20px; /* Ajoute un peu de padding sur les côtés pour que le logo ne colle pas au bord */
+}
+
+.logo {
+    width: 50px;
+    height: auto;
 }
 
 header nav a, footer nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
+}
+
+header nav a:hover, footer nav a:hover {
+    color: #e0e0e0; /* Change la couleur au survol (un gris plus clair) */
 }
 
 main {
