@@ -156,3 +156,25 @@ main {
     margin-top: 0;
     color: #333;
 }
+/* Styles pour le bloc de lien vers la vidéo */
+.video-link-container {
+    text-align: center; /* Centre le titre et l'image */
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.video-link-container h3 {
+    color: #555;
+}
+
+.video-thumbnail {
+    width: 100%; /* L'image s'adapte à la largeur du conteneur */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.video-link-container a:hover .video-thumbnail {
+    transform: scale(1.02); /* Effet de zoom léger au survol */
+}
