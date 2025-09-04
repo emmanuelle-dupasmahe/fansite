@@ -48,6 +48,7 @@ main {
     border-radius: 8px;
     line-height: 1.6;
     color: #333;
+    text-align: justify;
 }
 
 .presentation-block h2 {
@@ -71,6 +72,7 @@ main {
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
+    text-align:justify;
 }
 
 .member-photo-large {
@@ -94,8 +96,8 @@ main {
     line-height: 1.6;
 }
 
-/* Vous pouvez ajouter une règle pour inverser l'ordre des blocs */
-/* pour alterner la position des images (optionnel) */
+
+/* pour alterner la position des images */
 .member-block-details:nth-child(even) {
     flex-direction: row-reverse; /* Aligne l'image à droite */
 }
@@ -139,23 +141,47 @@ main {
     margin-top: 0;
     color: #333;
 }
-/* pour la vidéo sur la page index */
+
+/*pour la video de U2 sur la page index*/
+
 .video-container {
-    text-align: center; /* Centre le titre et la vidéo */
+    text-align: center;
     margin: 40px auto;
-    max-width: 560px; /* Adapte la largeur au lecteur YouTube */
+    max-width: 570px; /* Adaptez la largeur au conteneur de votre vidéo */
 }
 
 .video-container h3 {
     color: #555;
 }
-.video-container iframe {
+
+/* Styles pour la balise <video> */
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Arrondit les coins de la vidéo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ajoute une ombre pour un effet de relief */
+}
+
+/*pour la video de RR sur la page index*/
+.video2-container {
+    text-align: center; /* Centre le titre et la vidéo */
+    margin: 40px auto;
+    max-width: 560px; /* Adapte la largeur au lecteur YouTube */
+}
+
+.video2-container h3 {
+    color: #495a80;
+}
+
+/* Ajout pour donner une forme moins carrée à la vidéo */
+.video2-container iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
     border-radius: 15px; /* Ajoutez cette ligne pour arrondir les coins */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optionnel: une petite ombre pour le relief */
 }
+
 /* Styles pour les articles de la page News */
 .news-container {
     max-width: 900px;
@@ -171,6 +197,7 @@ main {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
     transition: transform 0.3s ease;
+    text-align:justify;
 }
 
 .news-block:hover {
