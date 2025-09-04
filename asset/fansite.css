@@ -156,25 +156,86 @@ main {
     margin-top: 0;
     color: #333;
 }
-/* Styles pour le bloc de lien vers la vidéo */
-.video-link-container {
-    text-align: center; /* Centre le titre et l'image */
+
+.video-container {
+    text-align: center; /* Centre le titre et la vidéo */
     margin: 40px auto;
-    max-width: 600px;
+    max-width: 560px; /* Adapte la largeur au lecteur YouTube */
 }
 
-.video-link-container h3 {
+.video-container h3 {
     color: #555;
 }
 
-.video-thumbnail {
-    width: 100%; /* L'image s'adapte à la largeur du conteneur */
+/* Règle pour rendre la vidéo responsive (s'adapte à l'écran) */
+/* C'est important pour les mobiles ! */
+.video-container iframe {
+    width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
+}
+
+/* Styles pour les articles de la page News */
+.news-container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.news-block {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
 
-.video-link-container a:hover .video-thumbnail {
-    transform: scale(1.02); /* Effet de zoom léger au survol */
+.news-block:hover {
+    transform: translateY(-5px); /* Effet de survol */
+}
+
+.news-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover; /* Assure que l'image remplit la zone sans déformation */
+    border-radius: 5px;
+    margin-right: 25px;
+    flex-shrink: 0; /* Empêche l'image de se compresser */
+}
+
+.news-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 22px;
+}
+
+.news-date {
+    font-style: italic;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/*responsive*/
+
+/*pour que les images ne dépassent pas la taille de l'écran*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Style pour les ordinateurs et les tablettes de taille minimale 768px et de taille maximale 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header, footer {
+    flex-direction: row; /* Le menu sera en ligne sur tablette et ordi */
+    justify-content: flex-end;
+  }
+}
+
+/* Style pour les ordinateurs et plus grands (à partir de 1024px) */
+@media (min-width: 1024px) {
+  body {
+    padding: 50px; /* On ajoute plus d'espace sur les grands écrans */
+  }
 }
