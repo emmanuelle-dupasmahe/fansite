@@ -141,6 +141,11 @@ main {
     margin-top: 0;
     color: #333;
 }
+/*pour que les titres des chansons tirés des albums soient dans une autre couleur et en italique*/
+.song-title {
+    color: #7b5bef; /* changement de couleur */
+    font-style: italic; /*  en italique */
+}
 
 /*pour la video de U2 sur la page index*/
 
