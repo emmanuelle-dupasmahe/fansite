@@ -55,23 +55,6 @@ main {
     color: #555;
 }
 
-.video-container {
-    text-align: center; /* Centre le titre et la vidéo */
-    margin: 40px auto;
-    max-width: 560px; /* Adapte la largeur au lecteur YouTube */
-}
-
-.video-container h3 {
-    color: #555;
-}
-
-/* Règle pour rendre la vidéo responsive (s'adapte à l'écran) */
-/* C'est important pour les mobiles ! */
-.video-container iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
-}
 .hero-image {
     width: 100%; /* L'image prend toute la largeur du conteneur */
     height: auto;
@@ -156,7 +139,7 @@ main {
     margin-top: 0;
     color: #333;
 }
-
+/* pour la vidéo sur la page index */
 .video-container {
     text-align: center; /* Centre le titre et la vidéo */
     margin: 40px auto;
@@ -166,15 +149,13 @@ main {
 .video-container h3 {
     color: #555;
 }
-
-/* Règle pour rendre la vidéo responsive (s'adapte à l'écran) */
-/* C'est important pour les mobiles ! */
 .video-container iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
+    border-radius: 15px; /* Ajoutez cette ligne pour arrondir les coins */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optionnel: une petite ombre pour le relief */
 }
-
 /* Styles pour les articles de la page News */
 .news-container {
     max-width: 900px;
@@ -218,8 +199,64 @@ main {
     margin-bottom: 15px;
 }
 
+/* Styles pour la page des liens vers d'autres sites de fans*/
+.links-container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.link-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.link-block:hover {
+    transform: translateY(-5px);
+}
+
+.link-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.link-content {
+    flex-grow: 1; /* Permet au contenu de prendre l'espace restant */
+}
+
+.link-content h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.link-content h2 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.link-content h2 a:hover {
+    color: #007bff; /* Change la couleur du lien au survol */
+}
+
 /*responsive*/
 
+/* Règle pour rendre la vidéo responsive (s'adapte à l'écran) */
+/* C'est important pour les mobiles ! */
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
+}
 /*pour que les images ne dépassent pas la taille de l'écran*/
 img {
   max-width: 100%;
