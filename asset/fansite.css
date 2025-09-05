@@ -3,6 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    animation: fadeIn 1.5s ease-in-out; /*animation lors du changement de page*/
+}
+/*pour une animation lors du changement de page*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 html {
