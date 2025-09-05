@@ -147,39 +147,20 @@ main {
     font-style: italic; /*  en italique */
 }
 
-/*pour la video de U2 sur la page index*/
 
+/*pour les videos de RR sur la page index*/
 .video-container {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 570px; /* Adaptez la largeur au conteneur de votre vidéo */
-}
-
-.video-container h3 {
-    color: #555;
-}
-
-/* Styles pour la balise <video> */
-.video-container video {
-    width: 100%;
-    height: auto;
-    border-radius: 15px; /* Arrondit les coins de la vidéo */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ajoute une ombre pour un effet de relief */
-}
-
-/*pour la video de RR sur la page index*/
-.video2-container {
     text-align: center; /* Centre le titre et la vidéo */
     margin: 40px auto;
     max-width: 560px; /* Adapte la largeur au lecteur YouTube */
 }
 
-.video2-container h3 {
+.video-container h3 {
     color: #495a80;
 }
 
 /* Ajout pour donner une forme moins carrée à la vidéo */
-.video2-container iframe {
+.video-container iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
