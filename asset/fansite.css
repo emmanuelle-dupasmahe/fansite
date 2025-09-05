@@ -159,7 +159,7 @@ main {
 }
 /*pour que les dates soient dans une autre couleur*/
 .date-album {
-    color:rgb(165, 188, 209);
+    color:rgb(137, 145, 154);
 }
 
 /*pour les videos de RR sur la page index*/
@@ -228,7 +228,7 @@ main {
 
 .news-date {
     font-style: italic;
-    color:rgb(165, 188, 209);
+    color:rgb(76, 80, 85);
     margin-top: -10px;
     margin-bottom: 15px;
 }
@@ -243,7 +243,7 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    background-color: #232323;
+    background-color:white;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -253,6 +253,7 @@ main {
 
 .link-block:hover {
     transform: translateY(-5px);
+    background-color: #e0e0e0;
 }
 
 .link-image {
@@ -272,12 +273,12 @@ main {
 .link-content h2 {
     margin-top: 0;
     font-size: 22px;
-    color:white;
+    color:rgb(50, 45, 45);
 }
 
 .link-content h2 a {
     text-decoration: none;
-    color: white;
+    color: rgb(40, 38, 38);
     transition: color 0.3s ease;
 }
 
