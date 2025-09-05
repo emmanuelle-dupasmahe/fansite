@@ -48,6 +48,8 @@ main {
     padding: 20px;
     min-height: calc(100vh - 120px); /* Pour que le footer reste en bas */
 }
+/*la page index*/
+
 .presentation-block {
     max-width: 800px;
     margin: 20px auto;
@@ -72,6 +74,37 @@ main {
     border-radius: 10px;
     margin-bottom: 25px; /* Espace sous l'image */
 }
+
+/*pour les videos sur la page index*/
+.video-container {
+    text-align: center; /* Centre le titre et la vidéo */
+    margin: 40px auto;
+    max-width: 560px; /* Adapte la largeur au lecteur YouTube */
+    padding: 20px; /* Ajoute un espace intérieur */
+    background-color: #232323;
+    border-radius: 10px; /* Arrondit les coins du conteneur */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Ajoute une ombre au conteneur */
+    transition: transform 0.3s ease;
+}
+.video-container:hover {
+    transform: translateY(-5px); /* Effet de survol pour que le bloc remonte légèrement */
+    background-color:rgb(85, 87, 97);
+}
+
+.video-container h3 {
+    color: white;
+    margin-bottom: 15px; /* Ajoute un espace sous le titre */
+}
+
+/* Ajout pour donner une forme moins carrée à la vidéo */
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
+    border-radius: 10px; /* pour arrondir les coins */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optionnel: une petite ombre pour le relief */
+}
+
 
 /* Styles pour les blocs membres sur la page des membres */
 .member-block-details {
@@ -169,30 +202,7 @@ main {
     color:rgb(137, 145, 154);
 }
 
-/*pour les videos de RR sur la page index*/
-.video-container {
-    text-align: center; /* Centre le titre et la vidéo */
-    margin: 40px auto;
-    max-width: 560px; /* Adapte la largeur au lecteur YouTube */
-    padding: 20px; /* Ajoute un espace intérieur */
-    background-color: #232323;
-    border-radius: 10px; /* Arrondit les coins du conteneur */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Ajoute une ombre au conteneur */
-}
 
-.video-container h3 {
-    color: white;
-    margin-bottom: 15px; /* Ajoute un espace sous le titre */
-}
-
-/* Ajout pour donner une forme moins carrée à la vidéo */
-.video-container iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
-    border-radius: 10px; /* pour arrondir les coins */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optionnel: une petite ombre pour le relief */
-}
 
 /* Styles pour les articles de la page News */
 .news-container {
