@@ -5,6 +5,9 @@ body {
     background-color: #f4f4f4;
 }
 
+html {
+    cursor: url('../asset/images/curseurguitare.png') 5 5, auto;/*pour que mon curseur de souris change*/
+}
 header, footer {
     background-color: #000000;
     color: white;
@@ -43,17 +46,17 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #232323;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 8px;
     line-height: 1.6;
-    color: #7C7B79;
+    color: #4d4b5c;
     text-align: justify;
 }
 
 .presentation-block h2 {
     text-align: center;
-    color: white;
+    color: rgb(24, 23, 23);
 }
 
 .hero-image {
@@ -63,16 +66,22 @@ main {
     border-radius: 10px;
     margin-bottom: 25px; /* Espace sous l'image */
 }
+
 /* Styles pour les blocs membres sur la page des membres */
 .member-block-details {
     display: flex;
     align-items: flex-start; /* Aligne l'image et le texte en haut du bloc */
     margin-bottom: 40px;
-    background-color: #232323;
+    background-color: white;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
     text-align:justify;
+}
+
+.member-block-details:hover {
+    transform: translateY(-5px); /* Effet de survol pour que le bloc remonte légèrement */
+    background-color:rgba(0,0,0,0.1);
 }
 
 .member-photo-large {
@@ -81,18 +90,18 @@ main {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 30px;
-    border: 3px solid #7C7B79;
+    border: 3px solid rgb(165, 188, 209);
     flex-shrink: 0; /* Empêche l'image de se compresser */
 }
 
 .member-text h2 {
     margin-top: 0;
-    color: white;
+    color: rgb(24, 23, 23);
     font-size: 24px;
 }
 
 .member-text p {
-    color: #7C7B79;
+    color: #4d4b5c;
     line-height: 1.6;
 }
 
@@ -128,11 +137,12 @@ main {
 
 .album-block:hover {
     transform: translateY(-5px); /* Effet de survol pour que le bloc remonte légèrement */
+    background-color:rgb(85, 87, 97);
 }
 
 .album-cover {
-    width: 100%;
-    height: auto;
+    width: 250px;
+    height: 250px;
     border-radius: 5px;
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
@@ -144,20 +154,28 @@ main {
 }
 /*pour que les titres des chansons tirés des albums soient dans une autre couleur et en italique*/
 .song-title {
-    color: #7b5bef; /* changement de couleur */
+    color: white; /* changement de couleur */
     font-style: italic; /*  en italique */
 }
-
+/*pour que les dates soient dans une autre couleur*/
+.date-album {
+    color:rgb(165, 188, 209);
+}
 
 /*pour les videos de RR sur la page index*/
 .video-container {
     text-align: center; /* Centre le titre et la vidéo */
     margin: 40px auto;
     max-width: 560px; /* Adapte la largeur au lecteur YouTube */
+    padding: 20px; /* Ajoute un espace intérieur */
+    background-color: #232323;
+    border-radius: 10px; /* Arrondit les coins du conteneur */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Ajoute une ombre au conteneur */
 }
 
 .video-container h3 {
-    color: #495a80;
+    color: white;
+    margin-bottom: 15px; /* Ajoute un espace sous le titre */
 }
 
 /* Ajout pour donner une forme moins carrée à la vidéo */
@@ -165,7 +183,7 @@ main {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
-    border-radius: 15px; /* Ajoutez cette ligne pour arrondir les coins */
+    border-radius: 10px; /* pour arrondir les coins */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optionnel: une petite ombre pour le relief */
 }
 
@@ -179,7 +197,7 @@ main {
     display: flex;
     align-items: center; /* Centre les éléments verticalement */
     margin-bottom: 30px;
-    background-color: #232323;
+    background-color: white;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -190,6 +208,7 @@ main {
 
 .news-block:hover {
     transform: translateY(-5px); /* Effet de survol */
+    background-color: rgba(0,0,0,0.1);
 }
 
 .news-image {
@@ -203,13 +222,13 @@ main {
 
 .news-content h2 {
     margin-top: 0;
-    color: white;
+    color: rgb(24, 23, 23);
     font-size: 22px;
 }
 
 .news-date {
     font-style: italic;
-    color: whitesmoke;
+    color:rgb(165, 188, 209);
     margin-top: -10px;
     margin-bottom: 15px;
 }
@@ -263,7 +282,7 @@ main {
 }
 
 .link-content h2 a:hover {
-    color: #007bff; /* Change la couleur du lien au survol */
+   color:rgb(165, 188, 209); /* Change la couleur du lien au survol */
 }
 
 /*responsive*/
