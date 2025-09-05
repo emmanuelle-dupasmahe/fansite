@@ -43,17 +43,17 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #232323;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 8px;
     line-height: 1.6;
-    color: #333;
+    color: #7C7B79;
     text-align: justify;
 }
 
 .presentation-block h2 {
     text-align: center;
-    color: #555;
+    color: white;
 }
 
 .hero-image {
@@ -68,7 +68,7 @@ main {
     display: flex;
     align-items: flex-start; /* Aligne l'image et le texte en haut du bloc */
     margin-bottom: 40px;
-    background-color: #fff;
+    background-color: #232323;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -81,18 +81,18 @@ main {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 30px;
-    border: 3px solid #95c3f5;
+    border: 3px solid #7C7B79;
     flex-shrink: 0; /* Empêche l'image de se compresser */
 }
 
 .member-text h2 {
     margin-top: 0;
-    color: #333;
+    color: white;
     font-size: 24px;
 }
 
 .member-text p {
-    color: #555;
+    color: #7C7B79;
     line-height: 1.6;
 }
 
@@ -117,11 +117,12 @@ main {
 }
 
 .album-block {
-    background-color: #fff;
+    background-color: #232323;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
     text-align: center;
+    color:#7C7B79;
     transition: transform 0.3s ease;
 }
 
@@ -139,7 +140,7 @@ main {
 
 .album-block h3 {
     margin-top: 0;
-    color: #333;
+    color: white;
 }
 /*pour que les titres des chansons tirés des albums soient dans une autre couleur et en italique*/
 .song-title {
@@ -178,12 +179,13 @@ main {
     display: flex;
     align-items: center; /* Centre les éléments verticalement */
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: #232323;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
     transition: transform 0.3s ease;
     text-align:justify;
+    color:#7C7B79;
 }
 
 .news-block:hover {
@@ -201,13 +203,13 @@ main {
 
 .news-content h2 {
     margin-top: 0;
-    color: #333;
+    color: white;
     font-size: 22px;
 }
 
 .news-date {
     font-style: italic;
-    color: #666;
+    color: whitesmoke;
     margin-top: -10px;
     margin-bottom: 15px;
 }
@@ -222,7 +224,7 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: #232323;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -245,16 +247,18 @@ main {
 
 .link-content {
     flex-grow: 1; /* Permet au contenu de prendre l'espace restant */
+    color:#7C7B79;
 }
 
 .link-content h2 {
     margin-top: 0;
     font-size: 22px;
+    color:white;
 }
 
 .link-content h2 a {
     text-decoration: none;
-    color: #333;
+    color: white;
     transition: color 0.3s ease;
 }
 
