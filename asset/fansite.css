@@ -141,6 +141,7 @@ main {
     transition: transform 0.3s ease;
 }
 
+
 .album-block:hover {
     transform: translateY(-5px); /* Effet de survol pour que le bloc remonte légèrement */
     background-color:rgb(85, 87, 97);
