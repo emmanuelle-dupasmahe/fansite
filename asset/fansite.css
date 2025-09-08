@@ -71,8 +71,7 @@ main {
 
 .social-links a:hover {
     background-color: #fff; /* Le fond devient blanc au survol */
-    border: 2px solid  #fff; /* Contour de l'icône */
-    color: #333; /* L'icône devient noire au survol */
+    border: #fff; /* Contour de l'icône qui est gris devient blanc */
 }
 
 /*LA PAGE INDEX*/
