@@ -269,8 +269,15 @@ main {
 .news-link:hover .news-block {
     background-color:#C23818; /* La couleur de fond devient rouge */
     color: white; /* Le texte devient blanc */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
+/*permet à mon image de passer sous la couleur rouge comme sur le site de U2*/
+.news-link:hover .news-image {
+    filter: none; 
+    mix-blend-mode: luminosity; /* Superpose la luminance de l'image sur le fond rouge */
+    opacity: 0.8; /*opacité pour que l'image soit plus ou moins visible */
+    transition: mix-blend-mode 0.3s ease, opacity 0.3s ease;
+}
 
 .news-image {
     width: 200px;
