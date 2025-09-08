@@ -360,6 +360,72 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+/* Style pour les petits écrans (smartphones) de taille maximale 768px */
+
+/*pour la page membres, la page news et la page autres sites de fans.*/
+
+@media (max-width: 768px) {
+    .member-block-details {
+        display: block; /* Empile les éléments en colonne sur mobile */
+        text-align: center; /* Centre le contenu pour une meilleure lisibilité */
+    }
+
+    .member-photo {
+        margin-right: 0; /* Supprime la marge à droite de l'image */
+        margin-bottom: 20px; /* Ajoute une marge en dessous pour séparer l'image du texte */
+    }
+
+    .member-content h3, .member-content p {
+        text-align: center; /* Centre aussi le texte pour une apparence soignée */
+    }
+    .news-block {
+        display: block; /* Empile l'image et le texte en colonne */
+    }
+
+    .news-image {
+        width: 100%; /* L'image prend toute la largeur du conteneur */
+        height: auto;
+        margin-right: 0; /* Supprime la marge à droite */
+        margin-bottom: 20px; /* Ajoute une marge en bas pour séparer l'image du texte */
+    }
+
+    .news-content h2,
+    .news-content .news-date,
+    .news-content p {
+        text-align: center; /* Centre le texte pour un meilleur rendu visuel sur mobile */
+    }
+    .link-block {
+        flex-direction: column; /* Empile l'image et le texte en colonne */
+        text-align: center; /* Centre le contenu pour une meilleure lisibilité */
+    }
+
+    .link-block img {
+        width: 100%;
+        max-width: 250px; /* Limite la taille de l'image sur les mobiles */
+        margin-right: 0;
+        margin-bottom: 15px; /* Ajoute un espace sous l'image */
+    }
+
+    .link-block h3,
+    .link-block p {
+        text-align: center; /* Centre le texte */
+    }
+    /*pour les header et footer de toutes les pages*/
+    header nav, footer nav {
+        flex-direction: column; /* Les éléments s'empilent verticalement */
+        align-items: center; /* Centre les éléments */
+        justify-content: center; /* Centre les éléments */
+    }
+
+    header nav a, footer nav a {
+        margin: 10px 0; /* Ajoute de l'espace vertical entre les liens */
+        padding: 5px 0;
+    }
+}
+
+
 /* Style pour les ordinateurs et les tablettes de taille minimale 768px et de taille maximale 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
   header, footer {
