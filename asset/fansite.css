@@ -14,8 +14,12 @@ body {
 html {
     cursor: url('../asset/images/curseurguitare.png') 5 5, auto;/*pour que mon curseur de souris change*/
 }
+a {
+    cursor: url('../asset/images/curseurguitare.png') 5 5, auto; /* pour que le curseur reste le même sur les liens */
+}
 
 /*HEADER ET FOOTER DANS LE STYLE DU SITE DE U2*/
+
 header, footer {
     background-color: #000000;
     color: white;
@@ -182,6 +186,7 @@ main {
     margin-right: 0;
     margin-left: 30px;
 }
+
 /* PAGE DISCOGRAPHIE*/
 
 /* Styles pour la grille de la discographie */
@@ -265,7 +270,7 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* L'ombre s'élargit */
 }
 
-/*indication que le block est cliquable car il y a un lien vers un extrait du film documentaire*/
+/*indication en rouge que le block est cliquable car il y a un lien vers un extrait du film documentaire*/
 .news-link:hover .news-block {
     background-color:#C23818; /* La couleur de fond devient rouge */
     color: white; /* Le texte devient blanc */
