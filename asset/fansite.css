@@ -51,6 +51,30 @@ main {
     padding: 20px;
     min-height: calc(100vh - 120px); /* Pour que le footer reste en bas */
 }
+
+/*ajout des liens vers les réseaux sociaux de U2 dans le même style que sur leur site*/
+.social-links a {
+    color: #000000; /* Couleur de l'icône */
+    background-color: #4D4D4D;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 20px; /* Taille de l'icône */
+    border: 2px solid  #4D4D4D; /* Contour de l'icône */
+    border-radius: 50%; /* Transforme le contour en cercle */
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #fff; /* Le fond devient blanc au survol */
+    border: 2px solid  #fff; /* Contour de l'icône */
+    color: #333; /* L'icône devient noire au survol */
+}
+
 /*LA PAGE INDEX*/
 
 .presentation-block {
@@ -322,17 +346,6 @@ main {
    color:rgb(165, 188, 209); /* Change la couleur du lien au survol */
 }
 
-.social-icons a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #007bff; /* Changement de couleur au survol */
-}
 
 /*RESPONSIVE*/
 
