@@ -314,6 +314,17 @@ main {
    color:rgb(165, 188, 209); /* Change la couleur du lien au survol */
 }
 
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Changement de couleur au survol */
+}
 /*responsive*/
 
 /* Règle pour rendre la vidéo responsive (s'adapte à l'écran) */
