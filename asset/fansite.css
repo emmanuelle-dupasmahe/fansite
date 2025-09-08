@@ -10,10 +10,12 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
+/*introduction d'un curseur guitare*/
 html {
     cursor: url('../asset/images/curseurguitare.png') 5 5, auto;/*pour que mon curseur de souris change*/
 }
+
+/*HEADER ET FOOTER DANS LE STYLE DU SITE DE U2*/
 header, footer {
     background-color: #000000;
     color: white;
@@ -27,6 +29,7 @@ header nav, footer nav {
     flex-wrap: wrap;
     padding: 0 20px; /* Ajoute un peu de padding sur les côtés pour que le logo ne colle pas au bord */
 }
+/* le logo du site de U2*/
 
 .logo {
     width: 50px;
@@ -48,7 +51,7 @@ main {
     padding: 20px;
     min-height: calc(100vh - 120px); /* Pour que le footer reste en bas */
 }
-/*la page index*/
+/*LA PAGE INDEX*/
 
 .presentation-block {
     max-width: 800px;
@@ -66,6 +69,7 @@ main {
     text-align: center;
     color: rgb(24, 23, 23);
 }
+/*une grande image du groupe U2*/
 
 .hero-image {
     width: 100%; /* L'image prend toute la largeur du conteneur */
@@ -75,7 +79,7 @@ main {
     margin-bottom: 25px; /* Espace sous l'image */
 }
 
-/*pour les videos sur la page index*/
+/*pour les 2 videos sur la page index*/
 .video-container {
     text-align: center; /* Centre le titre et la vidéo */
     margin: 40px auto;
@@ -106,7 +110,8 @@ main {
 }
 
 
-/* Styles pour les blocs membres sur la page des membres */
+/* PAGE MEMBRE */
+
 .member-block-details {
     display: flex;
     align-items: flex-start; /* Aligne l'image et le texte en haut du bloc */
@@ -154,6 +159,7 @@ main {
     margin-right: 0;
     margin-left: 30px;
 }
+/* PAGE DISCOGRAPHIE*/
 
 /* Styles pour la grille de la discographie */
 .album-grid {
@@ -204,7 +210,8 @@ main {
 
 
 
-/* Styles pour les articles de la page News */
+/* POUR LA PAGE NEWS */
+
 .news-container {
     max-width: 900px;
     margin: 40px auto;
@@ -261,7 +268,8 @@ main {
     margin-bottom: 15px;
 }
 
-/* Styles pour la page des liens vers d'autres sites de fans*/
+/* PAGE AUTRES SITES DE FANS */
+
 .links-container {
     max-width: 900px;
     margin: 40px auto;
@@ -325,7 +333,8 @@ main {
 .social-icons a:hover {
     color: #007bff; /* Changement de couleur au survol */
 }
-/*responsive*/
+
+/*RESPONSIVE*/
 
 /* Règle pour rendre la vidéo responsive (s'adapte à l'écran) */
 /* C'est important pour les mobiles ! */
