@@ -127,13 +127,13 @@ main {
     margin-bottom: 15px; /* Ajoute un espace sous le titre */
 }
 
-/* Ajout pour donner une forme moins carrée à la vidéo */
+/* une forme moins carrée à la vidéo */
 .video-container iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
     border-radius: 10px; /* pour arrondir les coins */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optionnel: une petite ombre pour le relief */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* une petite ombre pour le relief */
 }
 
 
@@ -439,7 +439,7 @@ img {
         padding: 5px 0;
     }
 
-    /* Effets visuels au toucher (l'équivalent de :hover sur mobile) */ 
+    /* Effets visuels au toucher (équivalent de :hover sur mobile) */ 
     .news-link:active .news-block {  
         transform: translateY(-5px); /* Le bloc se soulève au toucher */ 
         background-color: #cc0000; /* Le fond devient rouge au toucher */ 
