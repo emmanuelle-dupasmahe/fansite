@@ -440,7 +440,7 @@ img {
     }
 
     /* Effets visuels au toucher (l'équivalent de :hover sur mobile) */ 
-    .news-link:active .news-block { 
+    .news-link:active .news-block {  
         transform: translateY(-5px); /* Le bloc se soulève au toucher */ 
         background-color: #cc0000; /* Le fond devient rouge au toucher */ 
         box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* L'ombre s'élargit */ 
@@ -449,7 +449,7 @@ img {
     .news-block:active { 
         transform: translateY(-5px); /* Le bloc se soulève au toucher */ 
         background-color: #f0f0f0; /* Le fond devient gris au toucher */ 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* L'ombre s'élargit */ 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* L'ombre s'élargit */ 
     }  
 }
 
