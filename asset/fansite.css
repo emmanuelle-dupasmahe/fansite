@@ -3,22 +3,468 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    animation: fadeIn 1.5s ease-in-out; /*animation lors du changement de page*/
+}
+/*pour une animation lors du changement de page*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/*introduction d'un curseur guitare*/
+html {
+    cursor: url('../asset/images/curseurguitare.png') 5 5, auto;/*pour que mon curseur de souris change*/
+}
+a {
+    cursor: url('../asset/images/curseurguitare.png') 5 5, auto; /* pour que le curseur reste le même sur les liens */
 }
 
+/*HEADER ET FOOTER DANS LE STYLE DU SITE DE U2*/
+
 header, footer {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     padding: 1rem;
     text-align: center;
 }
+header nav, footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+    flex-wrap: wrap;
+    padding: 0 20px; /* Ajoute un peu de padding sur les côtés pour que le logo ne colle pas au bord */
+}
+/* le logo du site de U2*/
+
+.logo {
+    width: 50px;
+    height: auto;
+}
 
 header nav a, footer nav a {
-    color: white;
+    color: #e0e0e0; /*la couleur est un peu grise aavant le survol comme sur le site officiel*/
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
+    transition: color 0.3s ease; 
+}
+
+header nav a:hover, footer nav a:hover {
+    color: white; /* Change la couleur au survol (blanc) */
 }
 
 main {
     padding: 20px;
     min-height: calc(100vh - 120px); /* Pour que le footer reste en bas */
+}
+
+/*ajout des liens vers les réseaux sociaux de U2 dans le même style que sur leur site sur la page index*/
+.social-links a {
+    color: #000000; /* Couleur de l'icône */
+    background-color: #4D4D4D;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 20px; /* Taille de l'icône */
+    border: 2px solid  #4D4D4D; /* Contour de l'icône */
+    border-radius: 50%; /* Transforme le contour en cercle */
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #fff; /* Le fond devient blanc au survol */
+    border: #fff; /* Contour de l'icône qui est gris devient blanc */
+}
+
+/*LA PAGE INDEX*/
+
+.presentation-block {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);/*relief*/
+    border-radius: 8px;
+    line-height: 1.6;
+    color: #4d4b5c;
+    text-align: justify;
+}
+
+.presentation-block h2 {
+    text-align: center;
+    color: rgb(24, 23, 23);
+}
+/*une grande image du groupe U2*/
+
+.hero-image {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px; /* Espace sous l'image */
+}
+
+/*pour les 2 videos sur la page index*/
+.video-container {
+    text-align: center; /* Centre le titre et la vidéo */
+    margin: 40px auto;
+    max-width: 560px; /* Adapte la largeur au lecteur YouTube */
+    padding: 20px; /* Ajoute un espace intérieur */
+    background-color: #232323;
+    border-radius: 10px; /* Arrondit les coins du conteneur */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Ajoute une ombre au conteneur */
+    transition: transform 0.3s ease;
+}
+.video-container:hover {
+    transform: translateY(-5px); /* Effet de survol pour que le bloc remonte légèrement */
+    background-color:rgb(85, 87, 97);
+}
+
+.video-container h3 {
+    color: white;
+    margin-bottom: 15px; /* Ajoute un espace sous le titre */
+}
+
+/* une forme moins carrée à la vidéo */
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
+    border-radius: 10px; /* pour arrondir les coins */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* une petite ombre pour le relief */
+}
+
+
+/* PAGE MEMBRE */
+
+.member-block-details {
+    display: flex;
+    align-items: flex-start; /* Aligne l'image et le texte en haut du bloc */
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align:justify;
+}
+
+.member-block-details:hover {
+    transform: translateY(-5px); /* Effet de survol pour que le bloc remonte légèrement */
+    background-color:rgba(0,0,0,0.1);
+}
+
+.member-photo-large {
+    width: 200px; /* Taille plus grande pour la photo */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 3px solid rgb(94, 98, 101);
+    flex-shrink: 0; /* Empêche l'image de se compresser */
+}
+
+.member-text h2 {
+    margin-top: 0;
+    color: rgb(24, 23, 23);
+    font-size: 24px;
+}
+
+.member-text p {
+    color: #4d4b5c;
+    line-height: 1.6;
+}
+
+
+/* pour alterner la position des images */
+.member-block-details:nth-child(even) {
+    flex-direction: row-reverse; /* Aligne l'image à droite */
+}
+
+.member-block-details:nth-child(even) .member-photo-large {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+/* PAGE DISCOGRAPHIE*/
+
+/* Styles pour la grille de la discographie */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.album-block {
+    background-color: #232323;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    color:#7C7B79;
+    transition: transform 0.3s ease;
+}
+
+
+.album-block:hover {
+    transform: translateY(-5px); /* Effet de survol pour que le bloc remonte légèrement */
+    background-color:rgb(85, 87, 97);
+}
+
+.album-cover {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.album-block h3 {
+    margin-top: 0;
+    color: white;
+}
+/*pour que les titres des chansons tirés des albums soient dans une autre couleur et en italique*/
+.song-title {
+    color: white; /* changement de couleur */
+    font-style: italic; /*  en italique */
+}
+/*pour que les dates soient dans une autre couleur*/
+.date-album {
+    color:rgb(137, 145, 154);
+}
+
+
+
+/* POUR LA PAGE NEWS */
+
+.news-container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.news-block {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Ajout de la transition sur la couleur de fond */
+    text-align:justify;
+    color:#7C7B79;
+}
+
+.news-link {
+    display: block;
+    text-decoration: none; /* pas de souligné*/
+    color: inherit; /* Le texte garde sa couleur d'origine */
+}
+
+.news-block:hover {
+    transform: translateY(-5px); /* Le bloc se soulève */
+    background-color: #f0f0f0; /* Le fond change de couleur */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* L'ombre s'élargit */
+}
+
+/*indication en rouge que le block est cliquable car il y a un lien vers un extrait du film documentaire*/
+.news-link:hover .news-block {
+    background-color:#C23818; /* La couleur de fond devient rouge */
+    color: white; /* Le texte devient blanc */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/*permet à mon image de passer sous la couleur rouge comme sur le site de U2*/
+.news-link:hover .news-image {
+    filter: none; 
+    mix-blend-mode: luminosity; /* Superpose la luminance de l'image sur le fond rouge */
+    opacity: 0.8; /*opacité pour que l'image soit plus ou moins visible */
+    transition: mix-blend-mode 0.3s ease, opacity 0.3s ease;
+}
+
+.news-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover; /* Assure que l'image remplit la zone sans déformation */
+    border-radius: 5px;
+    margin-right: 25px;
+    flex-shrink: 0; /* Empêche l'image de se compresser */
+}
+
+.news-content h2 {
+    margin-top: 0;
+    color: rgb(24, 23, 23);
+    font-size: 22px;
+}
+
+.news-date {
+    font-style: italic;
+    color:rgb(76, 80, 85);
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* PAGE AUTRES SITES DE FANS */
+
+.links-container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.link-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color:white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    text-align:justify;
+}
+
+.link-block:hover {
+    transform: translateY(-5px);
+    background-color: #e0e0e0;
+}
+
+.link-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.link-content {
+    flex-grow: 1; /* Permet au contenu de prendre l'espace restant */
+    color:#7C7B79;
+}
+
+.link-content h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color:rgb(50, 45, 45);
+}
+
+.link-content h2 a {
+    text-decoration: none;
+    color: rgb(40, 38, 38);
+    transition: color 0.3s ease;
+}
+
+.link-content h2 a:hover {
+   color:rgb(165, 188, 209); /* Change la couleur du lien au survol */
+}
+
+
+/*RESPONSIVE*/
+
+/* Règle pour rendre la vidéo responsive (s'adapte à l'écran) */
+/* C'est important pour les mobiles ! */
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Garde le format 16:9 de la vidéo */
+}
+/*pour que les images ne dépassent pas la taille de l'écran*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Style pour les petits écrans (smartphones) de taille maximale 768px */
+
+/*pour la page membres, la page news et la page autres sites de fans.*/
+
+@media (max-width: 768px) {
+    .member-block-details {
+        display: block; /* Empile les éléments en colonne sur mobile */
+        text-align: center; /* Centre le contenu pour une meilleure lisibilité */
+    }
+
+    .member-photo {
+        margin-right: 0; /* Supprime la marge à droite de l'image */
+        margin-bottom: 20px; /* Ajoute une marge en dessous pour séparer l'image du texte */
+    }
+
+    .member-content h3, .member-content p {
+        text-align: center; /* Centre aussi le texte pour une apparence soignée */
+    }
+    .news-block {
+        display: block; /* Empile l'image et le texte en colonne */
+    }
+
+    .news-image {
+        width: 100%; /* L'image prend toute la largeur du conteneur */
+        height: auto;
+        margin-right: 0; /* Supprime la marge à droite */
+        margin-bottom: 20px; /* Ajoute une marge en bas pour séparer l'image du texte */
+    }
+
+    .news-content h2,
+    .news-content .news-date,
+    .news-content p {
+        text-align: center; /* Centre le texte pour un meilleur rendu visuel sur mobile */
+    }
+    .link-block {
+        flex-direction: column; /* Empile l'image et le texte en colonne */
+        text-align: center; /* Centre le contenu pour une meilleure lisibilité */
+    }
+
+    .link-block img {
+        width: 100%;
+        max-width: 250px; /* Limite la taille de l'image sur les mobiles */
+        margin-right: 0;
+        margin-bottom: 15px; /* Ajoute un espace sous l'image */
+    }
+
+    .link-block h3,
+    .link-block p {
+        text-align: center; /* Centre le texte */
+    }
+    /*pour les header et footer de toutes les pages*/
+    header nav, footer nav {
+        flex-direction: column; /* Les éléments s'empilent verticalement */
+        align-items: center; /* Centre les éléments */
+        justify-content: center; /* Centre les éléments */
+    }
+
+    header nav a, footer nav a {
+        margin: 10px 0; /* Ajoute de l'espace vertical entre les liens */
+        padding: 5px 0;
+    }
+
+    /* Effets visuels au toucher (équivalent de :hover sur mobile) */ 
+    .news-link:active .news-block {  
+        transform: translateY(-5px); /* Le bloc se soulève au toucher */ 
+        background-color: #cc0000; /* Le fond devient rouge au toucher */ 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* L'ombre s'élargit */ 
+    } 
+    /*  un effet pour les blocs non cliquables au toucher */
+    .news-block:active { 
+        transform: translateY(-5px); /* Le bloc se soulève au toucher */ 
+        background-color: #f0f0f0; /* Le fond devient gris au toucher */ 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* L'ombre s'élargit */ 
+    }  
+}
+
+
+/* Style pour les ordinateurs et les tablettes de taille minimale 768px et de taille maximale 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header, footer {
+    flex-direction: row; /* Le menu sera en ligne sur tablette et ordi */
+    justify-content: flex-end;
+  }
+}
+
+/* Style pour les ordinateurs et plus grands (à partir de 1024px) */
+@media (min-width: 1024px) {
+  body {
+    padding: 50px; /* On ajoute plus d'espace sur les grands écrans */
+  }
 }
